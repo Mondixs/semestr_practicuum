@@ -18,3 +18,13 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    gender = models.CharField(max_length=10, choices=[('Male', 'Male'), ('Female', 'Female')])
+    age = models.IntegerField()
+    city = models.CharField(max_length=100)
+    academic_pressure = models.FloatField()
+    study_satisfaction = models.FloatField()
+
+    def str(self):
+        return self.name
